@@ -8,10 +8,11 @@ lazy val pipo = project.in(file("."))
   .settings(PB.protobufSettings: _*)
   .settings(
     sourceDirectories in PB.protobufConfig ++= Seq(
-      file("Resources/Protobufs")
+      file("Resources/Protobufs/dota_s2/client")
     ),
      PB.includePaths in PB.protobufConfig ++= Seq(
-       file("Resources/Protobufs")
+      file("Resources/Protobufs"),
+      file("Resources/Protobufs/dota_s2/client")
     )
   )
 
